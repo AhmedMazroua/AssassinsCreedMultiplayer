@@ -48,6 +48,8 @@ the ring, it should report that the person is stalking themselves
     public void printKillRing() {
         // Initialize current variable
         AssassinNode curr = killRingHead;
+
+        // Print stalking status to console
         while (curr != null) {
             if (curr != null && curr.next == null){
                 curr.next = curr;
@@ -75,7 +77,7 @@ the graveyard is empty.
         // Initialize current variable
         AssassinNode current = graveyardHead;
         while (current != null) {
-            System.out.println(current.name + " was killed by " + current.killer);
+            System.out.println(current.name + " was killed by " + current.killer); // Print graveyard kill status to console
             current = current.next;
         }
     }
@@ -88,6 +90,8 @@ comparing names.
     public boolean killRingContains(String name) {
         // Initialize current variable
         AssassinNode curr = killRingHead;
+
+        // Check if name is a valid entry
         while (curr != null) {
             if (curr.name.equalsIgnoreCase(name)) {
                 return true;
@@ -105,6 +109,7 @@ case in comparing names.
     public boolean graveyardContains(String name) {
         // Initialize current variable
         AssassinNode curr = graveyardHead;
+        
         while (curr != null) {
             if (curr.name.equalsIgnoreCase(name)) {
                 return true;
