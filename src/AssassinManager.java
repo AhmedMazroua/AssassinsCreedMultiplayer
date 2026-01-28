@@ -53,7 +53,7 @@ public class AssassinManager {
         while (curr != null) {
             if (curr.next == null) {
                 // Only one person in the ring - they stalk themselves
-                System.out.println("    " + curr.name + " is stalking " + curr.name);
+                System.out.println("    " + curr.name + " is stalking " + killRingHead.name);
                 break;
             } else {
                 System.out.println("    " + curr.name + " is stalking " + curr.next.name);
